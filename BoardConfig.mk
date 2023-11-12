@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/tecno/TECNO-KG5j
+DEVICE_PATH := device/tecno/KG5j
 
 # A/B
 AB_OTA_UPDATER := true
@@ -25,7 +25,7 @@ TARGET_USES_64_BIT_BINDER := true
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := TECNO-KG5j
+TARGET_BOOTLOADER_BOARD_NAME := KG5j
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -44,8 +44,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := TECNO-KG5j_defconfig
-TARGET_KERNEL_SOURCE := kernel/tecno/TECNO-KG5j
+TARGET_KERNEL_CONFIG := KG5j_defconfig
+TARGET_KERNEL_SOURCE := kernel/tecno/KG5j
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -93,4 +93,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/tecno/TECNO-KG5j/BoardConfigVendor.mk
+include vendor/tecno/KG5j/BoardConfigVendor.mk

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_TECNO-KG5j.mk
+    $(LOCAL_DIR)/lineage_KG5j.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_TECNO-KG5j-user \
-    lineage_TECNO-KG5j-userdebug \
-    lineage_TECNO-KG5j-eng
+    lineage_KG5j-user \
+    lineage_KG5j-userdebug \
+    lineage_KG5j-eng

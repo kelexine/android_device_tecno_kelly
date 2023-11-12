@@ -13,7 +13,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.2-service \
+    bootctl
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -78,4 +79,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/tecno/TECNO-KG5j/TECNO-KG5j-vendor.mk)
+$(call inherit-product, vendor/tecno/KG5j/KG5j-vendor.mk)
