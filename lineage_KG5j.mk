@@ -11,12 +11,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from TECNO-KG5j device
-$(call inherit-product, device/tecno/TECNO-KG5j/device.mk)
+$(call inherit-product, device/tecno/KG5j/device.mk)
 
-PRODUCT_DEVICE := TECNO-KG5j
-PRODUCT_NAME := lineage_TECNO-KG5j
+PRODUCT_DEVICE := KG5j
+PRODUCT_NAME := lineage_KG5j
 PRODUCT_BRAND := TECNO
-PRODUCT_MODEL := TECNO KG5j
+PRODUCT_MODEL := KG5j
 PRODUCT_MANUFACTURER := tecno
 
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
