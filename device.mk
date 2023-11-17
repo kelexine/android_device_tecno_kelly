@@ -49,7 +49,7 @@ PRODUCT_CHARACTERISTICS := default
 PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
-    fstab.enableswap \
+    fstab.mt6761 \
     factory_init.connectivity.rc \
     factory_init.project.rc \
     factory_init.rc \
@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6761.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.enableswap:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.enableswap
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6761
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
