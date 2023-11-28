@@ -8,7 +8,7 @@
 #
 ```
 
-![Tecno Spark 8C KG5j (kelly)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-8c-1.jpg)
+#Device Info
 
 |Basic               |Spec Sheet|
 |--                  |--                                                            |
@@ -19,3 +19,6 @@
 |Android Version     |11 (HiOS 7.6)                                               |
 |Storage             |64GB                                                      |
 |Variant             |KG5j                                      |
+
+
+![Tecno Spark 8C KG5j (kelly)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-8c-1.jpg)
