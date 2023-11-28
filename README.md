@@ -18,3 +18,4 @@
 |Memory              |2/3/4GB RAM                                                     |
 |Android Version     |11 (HiOS 7.6)                                               |
 |Storage             |64GB                                                      |
+|Variant             |KG5j                                      |
