@@ -8,7 +8,7 @@
 #
 ```
 
-#Device Info
+# Device Info
 
 |Basic               |Spec Sheet|
 |--                  |--                                                            |
@@ -20,5 +20,6 @@
 |Storage             |64GB                                                      |
 |Variant             |KG5j                                      |
 
+# Device Photos
 
 ![Tecno Spark 8C KG5j (kelly)](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-8c-1.jpg)
