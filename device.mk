@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6761
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := current
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
