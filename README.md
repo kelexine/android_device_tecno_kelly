@@ -15,7 +15,7 @@
 |CPU                 |Quad-core (4x2.0 GHz Cortex-A53)      |
 |Chipset             |Mediatek Helio A22 MT6761 (12 nm)                                     |
 |GPU                 |PowerVR GE6300                                             |
-|Memory              |2GB RAM                                                     |
+|Memory              |RAM (2GB+2GB Extended RAM)                                                |
 |Android Version     |Android 11 (HiOS 7.6)                                               |
 |Storage             |64GB                                                      |
 |Variant             |KG5j                                      |
