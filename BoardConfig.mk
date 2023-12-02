@@ -8,7 +8,15 @@ DEVICE_PATH := device/tecno/KG5j
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += system
+AB_OTA_PARTITIONS += \
+    system \
+    vendor \
+    product \
+    system_ext \
+    boot \
+    vbmeta_vendor \
+    vbmeta_system
+
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
@@ -34,7 +42,7 @@ TARGET_SCREEN_DENSITY := 320
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 buildvariant=user
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 printk.devkmsg=on buildvariant=user
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x11b00000
 BOARD_KERNEL_TAGS_OFFSET := 0x07880000
@@ -57,6 +65,18 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG :=
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := 
 endif
+
+# Vendor partition options.
+# If you wish to use the prebuilt vendor image. Comment all of this out to build the actual vendor image from the vendor files.
+# BOARD_PREBUILT_VENDORIMAGE := vendor/cat/S42G/vendor.img
+# BUILD_WITHOUT_VENDOR := true
+
+# To build these images.
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_VENDOR := vendor
+# TARGET_COPY_OUT_VBMETA_VENDOR := vbmeta_vendor
+# TARGET_COPY_OUT_VBMETA_SYSTEM := vbmeta_system
+
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
