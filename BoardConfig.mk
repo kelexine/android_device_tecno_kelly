@@ -74,6 +74,8 @@ endif
 # To build these images.
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
+# To build the product image.
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 # TARGET_COPY_OUT_VBMETA_VENDOR := vbmeta_vendor
 # TARGET_COPY_OUT_VBMETA_SYSTEM := vbmeta_system
 
