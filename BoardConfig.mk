@@ -68,8 +68,8 @@ endif
 
 # Vendor partition options.
 # If you wish to use the prebuilt vendor image. Comment all of this out to build the actual vendor image from the vendor files.
-# BOARD_PREBUILT_VENDORIMAGE := vendor/cat/S42G/vendor.img
-# BUILD_WITHOUT_VENDOR := true
+BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/KG5j/vendor.img
+BUILD_WITHOUT_VENDOR := true
 
 # To build these images.
 TARGET_COPY_OUT_PRODUCT := product
