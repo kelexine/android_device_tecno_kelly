@@ -121,4 +121,4 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 DEVICE_MANIFEST_FILE += device/tecno/KG5j/manifest.xml
 
 # Inherit the proprietary files
-include vendor/tecno/KG5j/BoardConfigVendor.mk
+#include vendor/tecno/KG5j/BoardConfigVendor.mk
