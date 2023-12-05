@@ -30,6 +30,7 @@ jobs:
             cd ~/android/lineage
             git clone https://github.com/kelexine/android_device_tecno_KG5j -b android-11 device/tecno/KG5j
             git clone https://github.com/kelexine/android_vendor_tecno_KG5j -b KG5j vendor/tecno/KG5j
+            git clone https://github.com/LineageOS/android_vendor_qcom_opensource_fm-commonsys.git -b lineage-19.1 vendor/qcom/opensource/fm-commonsys
       - run:
           name: Setup CCACHE
           command: |
@@ -44,8 +45,7 @@ jobs:
           name: Start ROM Build
           command: |
             cd ~/android/lineage
-            ls packages/apps/
-            rm -rf packages/apps/FMRadio
+            ls packages/apps
             ls *
             source build/envsetup.sh
             lunch lineage_KG5j-eng
