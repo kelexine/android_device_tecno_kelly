@@ -50,7 +50,7 @@ jobs:
           command: |
             cd ~/android/lineage
             source build/envsetup.sh
-            lunch lineage_leo-userdebug
+            lunch lineage_KG5j-userdebug
             mka clean
             mka bootimage -j10
             echo $CIRCLE_BUILD_NUM
@@ -59,7 +59,7 @@ jobs:
           command: |
             cd ~/android/lineage
             cd device/tecno/KG5j
-            gh release create $CIRCLE_BUILD_NUM --latest --generate-notes ~/android/lineage/out/target/product/KG5j/*.img
+            gh release create $CIRCLE_BUILD_NUM --latest --notes "This build is still in testing phase, so flash at your own risk" --title "LineageOS Build for Tecno Spark 8C (kelly)"  ~/android/lineage/out/target/product/KG5j/*.img
       - store_artifacts:
             path: |
                ~/android/lineage/out/target/product/KG5j/*.zip
