@@ -75,7 +75,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.hot12play
+    android.hardware.light@2.0-service.kg5j
 
 # KPOC
 PRODUCT_PACKAGES += \
