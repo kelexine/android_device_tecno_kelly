@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Setup Environment
           command: |
-            wget https://github.com/cli/cli/releases/download/v2.40.1/gh_2.40.1_linux_amd64.deb -O g>
+            wget https://github.com/cli/cli/releases/download/v2.40.1/gh_2.40.1_linux_amd64.deb -O gh.deb
             sudo dpkg -i gh.deb
             export GITHUB_TOKEN=${GITHUB_TOKEN}
             unset GITHUB_TOKEN
