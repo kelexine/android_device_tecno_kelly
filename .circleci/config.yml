@@ -58,7 +58,7 @@ jobs:
             ls out/target/
             ls out/target/product/
             ls out/target/product/KG5j/
-      - github-cli/install:
+      - github-cli/install
       - run:
           name: Upload To GitHub
           command: |
