@@ -64,7 +64,7 @@ jobs:
           command: |
             cd ~/android/lineage
             export GITHUB_TOKEN=${GITHUB_TOKEN}
-            gh auth login --with-token <<< ${GITHUB_TOKEN}
+            gh auth login --with-token \\<<< ${GITHUB_TOKEN}
             gh release create $CIRCLE_BUILD_NUM out/target/product/KG5j/*.img
       - store_artifacts:
             path: |
