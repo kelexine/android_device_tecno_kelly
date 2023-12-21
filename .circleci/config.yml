@@ -50,24 +50,17 @@ jobs:
           name: Start ROM Build
           command: |
             cd ~/android/lineage
-            ls packages/apps
-            ls *
             source build/envsetup.sh
             lunch lineage_KG5j-userdebug
             mka clean
             mka bootimage -j10
-            cd ~/android/lineage
-            ls out/
-            ls out/target/
-            ls out/target/product/
-            ls out/target/product/KG5j/
             echo $CIRCLE_BUILD_NUM
       - run:
           name: Upload To GitHub
           command: |
             cd ~/android/lineage
             cd device/tecno/KG5j
-            gh release create $CIRCLE_BUILD_NUM ~/android/lineage/out/target/product/KG5j/*.img
+            gh release create $CIRCLE_BUILD_NUM --latest --generate-notes ~/android/lineage/out/target/product/KG5j/*.img
       - store_artifacts:
             path: |
                ~/android/lineage/out/target/product/KG5j/*.zip
