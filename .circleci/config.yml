@@ -49,7 +49,7 @@ jobs:
             ls packages/apps
             ls *
             source build/envsetup.sh
-            lunch lineage_KG5j-eng
+            lunch lineage_KG5j-userdebug
             mka clean
             mka bacon -j10
             cd ~/android/lineage
