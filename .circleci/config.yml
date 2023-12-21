@@ -51,7 +51,7 @@ jobs:
             source build/envsetup.sh
             lunch lineage_KG5j-eng
             mka clean
-            mka bacon -j10
+            mka bootimage -j10
             cd ~/android/lineage
             ls out/
             ls out/target/
