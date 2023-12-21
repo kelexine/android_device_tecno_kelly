@@ -33,9 +33,8 @@ jobs:
           command: |
             cd ~/android/lineage
             git clone https://github.com/kelexine/android_device_tecno_KG5j -b android-11 device/tecno/KG5j
-            rm -rf vendor/qcom/opensource/fm-commonsys
             git clone https://github.com/kelexine/android_vendor_tecno_KG5j -b KG5j vendor/tecno/KG5j
-            git clone https://github.com/LineageOS/android_vendor_qcom_opensource_fm-commonsys.git -b lineage-19.1 vendor/qcom/opensource/fm-commonsys
+            git clone https://github.com/IMYdev/twrp_device_infinix_leo device/infinix/leo
       - run:
           name: Setup CCACHE
           command: |
@@ -51,7 +50,7 @@ jobs:
           command: |
             cd ~/android/lineage
             source build/envsetup.sh
-            lunch lineage_KG5j-userdebug
+            lunch lineage_leo-userdebug
             mka clean
             mka bootimage -j10
             echo $CIRCLE_BUILD_NUM
