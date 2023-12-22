@@ -1,9 +1,5 @@
 
 version: 2.1
-orbs:
-github-cli: circleci/github-cli@2.2.0
-  - github-cli/setup:
-    token: GITHUB_TOKEN
 jobs:
   build:
     machine:
@@ -13,6 +9,11 @@ jobs:
       - run:
           name: Setup Environment
           command: |
+            wget https://github.com/cli/cli/releases/download/v2.40.1/gh_2.40.1_linux_amd64.deb -O gh.deb
+            sudo dpkg -i gh.deb
+            export GITHUB_TOKEN=${GITHUB_TOKEN}
+            unset GITHUB_TOKEN
+            gh auth login --with-token \<<< ${GITHUB_TOKEN}
             sudo apt update && sudo apt install -y bc bison build-essential ccache git-lfs curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python-is-python3
       - run:
           name: Set up Repo And Sync LinageOS source
@@ -32,9 +33,8 @@ jobs:
           command: |
             cd ~/android/lineage
             git clone https://github.com/kelexine/android_device_tecno_KG5j -b android-11 device/tecno/KG5j
-            rm -rf vendor/qcom/opensource/fm-commonsys
             git clone https://github.com/kelexine/android_vendor_tecno_KG5j -b KG5j vendor/tecno/KG5j
-            git clone https://github.com/LineageOS/android_vendor_qcom_opensource_fm-commonsys.git -b lineage-19.1 vendor/qcom/opensource/fm-commonsys
+            git clone https://github.com/IMYdev/twrp_device_infinix_leo device/infinix/leo
       - run:
           name: Setup CCACHE
           command: |
@@ -49,17 +49,17 @@ jobs:
           name: Start ROM Build
           command: |
             cd ~/android/lineage
-            ls packages/apps
-            ls *
             source build/envsetup.sh
             lunch lineage_KG5j-userdebug
             mka clean
-            mka bacon -j10
+            mka bootimage -j10
+            echo $CIRCLE_BUILD_NUM
+      - run:
+          name: Upload To GitHub
+          command: |
             cd ~/android/lineage
-            ls out/
-            ls out/target/
-            ls out/target/product/
-            ls out/target/product/KG5j/
+            cd device/tecno/KG5j
+            gh release create $CIRCLE_BUILD_NUM --latest --notes "This build is still in testing phase, so flash at your own risk" --title "LineageOS Build for Tecno Spark 8C (kelly)"  ~/android/lineage/out/target/product/KG5j/*.img
       - store_artifacts:
             path: |
                ~/android/lineage/out/target/product/KG5j/*.zip
@@ -68,5 +68,3 @@ workflows:
   main:
     jobs:
       - build
-
-      
