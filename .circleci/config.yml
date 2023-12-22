@@ -52,7 +52,7 @@ jobs:
             source build/envsetup.sh
             lunch lineage_KG5j-userdebug
             mka clean
-            mka bootimage -j10
+            mka bacon -j10
             echo $CIRCLE_BUILD_NUM
       - run:
           name: Upload To GitHub
