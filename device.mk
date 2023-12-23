@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
 
 # APN's
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+    $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
 # [DNM] Temp permissions
 PRODUCT_COPY_FILES += \
