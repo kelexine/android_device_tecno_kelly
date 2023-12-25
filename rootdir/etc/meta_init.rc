@@ -717,7 +717,7 @@ on property:sys.usb.ffs.ready=1 && property:ro.boot.usbconfig=3 && property:sys.
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 start
 #TRANSSION_START
 on property:persist.vendor.tran.wipedata=1
-    tran_factory_reset
+    
 #TRANSSION_END
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 end
 

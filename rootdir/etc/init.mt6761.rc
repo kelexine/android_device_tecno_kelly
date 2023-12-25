@@ -1185,6 +1185,6 @@ service osi /system/bin/osi
 
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 start
 on property:persist.vendor.tran.wipedata=1 && property:ro.boot.atm=enable
-    tran_factory_reset
+    
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 end
 
