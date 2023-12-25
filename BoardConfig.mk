@@ -154,7 +154,7 @@ BOARD_VNDK_VERSION := current
 
 # VINTF
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Inherit the proprietary files
 include vendor/tecno/KG5j/BoardConfigVendor.mk

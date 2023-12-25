@@ -93,6 +93,11 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
     #ImsInit
 
+# Prebuilts - Touch screen (For recovery)
+PRODUCT_COPY_FILES += \
+    vendor/tecno/KG5j/proprietary/vendor/firmware/hdl_firmware.img:recovery/root/vendor/firmware/hdl_firmware.img
+    vendor/tecno/KG5j/proprietary/vendor/firmware/hdl_firmware_01.img:recovery/root/vendor/firmware/hdl_firmware_01.img
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay \
