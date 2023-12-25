@@ -5,7 +5,7 @@
 #
 
 # Include GSI keys
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -93,6 +93,11 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
     #ImsInit
 
+# Prebuilts - Touch screen (For recovery)
+PRODUCT_COPY_FILES += \
+    vendor/tecno/KG5j/proprietary/vendor/firmware/hdl_firmware.img:recovery/root/vendor/firmware/hdl_firmware.img
+    vendor/tecno/KG5j/proprietary/vendor/firmware/hdl_firmware_01.img:recovery/root/vendor/firmware/hdl_firmware_01.img
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay \
@@ -104,7 +109,7 @@ PRODUCT_COPY_FILES += \
 
 # APN's
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+    $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
 # [DNM] Temp permissions
 PRODUCT_COPY_FILES += \
