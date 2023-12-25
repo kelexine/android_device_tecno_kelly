@@ -39,7 +39,7 @@ jobs:
             source build/envsetup.sh
             lunch lineage_KG5j-userdebug
             croot
-            mka bootimage -j10
+            mka bootimage -j$(nproc)
             echo $CIRCLE_BUILD_NUM
       - run:
           name: Upload To GitHub
