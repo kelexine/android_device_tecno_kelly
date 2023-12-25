@@ -24,7 +24,7 @@ jobs:
             sudo ln -sf ~/bin/repo /usr/bin/repo
             git config --global user.name "kelexine"
             git config --global user.email "frankiekelechi@gmail.com"
-            python3 ~/bin/repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-19.1
+            python3 ~/bin/repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-20.0
             python3 ~/bin/repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j20
       - run:
           name: Clone Device Tree and Vendor Tree
@@ -32,17 +32,6 @@ jobs:
             cd ~/android/lineage
             git clone https://github.com/kelexine/android_device_tecno_KG5j -b android-11 device/tecno/KG5j
             git clone https://github.com/kelexine/android_vendor_tecno_KG5j -b KG5j vendor/tecno/KG5j
-            git clone https://github.com/IMYdev/twrp_device_infinix_leo device/infinix/leo
-      - run:
-          name: Setup CCACHE
-          command: |
-            cd ~/android/lineage
-            mkdir ~/ccache
-            export CCACHE_DIR=~/ccache
-            export USE_CCACHE=1
-            export CCACHE_EXEC=/usr/bin/ccache
-            ccache -M 30G
-            df -H
       - run:
           name: Start ROM Build
           command: |
@@ -50,7 +39,7 @@ jobs:
             source build/envsetup.sh
             lunch lineage_KG5j-userdebug
             croot
-            mka bacon -j10
+            mka bootimage -j10
             echo $CIRCLE_BUILD_NUM
       - run:
           name: Upload To GitHub
