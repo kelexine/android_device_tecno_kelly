@@ -153,8 +153,8 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 BOARD_VNDK_VERSION := current
 
 # VINTF
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+#DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+#DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Inherit the proprietary files
 include vendor/tecno/KG5j/BoardConfigVendor.mk
