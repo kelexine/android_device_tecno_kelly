@@ -24,7 +24,7 @@ jobs:
             sudo ln -sf ~/bin/repo /usr/bin/repo
             git config --global user.name "kelexine"
             git config --global user.email "frankiekelechi@gmail.com"
-            python3 ~/bin/repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-20.0
+            python3 ~/bin/repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-19.1
             python3 ~/bin/repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j20
       - run:
           name: Clone Device Tree and Vendor Tree
