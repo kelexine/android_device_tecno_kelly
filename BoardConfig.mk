@@ -77,11 +77,6 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := 
 endif
 
-# Vendor partition options.
-# If you wish to use the prebuilt vendor image. Comment all of this out to build the actual vendor image from the vendor files.
-# BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/KG5j/vendor.img
-# BUILD_WITHOUT_VENDOR := true
-
 # To build the product image.
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
