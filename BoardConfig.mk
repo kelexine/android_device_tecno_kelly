@@ -126,7 +126,7 @@ VENDOR_SECURITY_PATCH := 2023-08-01
 
 # Use prebuilt vendor
 BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/vendor.img
+BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/KG5j/vendor.img
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
