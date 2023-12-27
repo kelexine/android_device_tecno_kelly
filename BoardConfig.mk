@@ -14,6 +14,7 @@ AB_OTA_PARTITIONS += \
     product \
     system_ext \
     boot \
+    vbmeta \
     vbmeta_vendor \
     vbmeta_system
 
@@ -46,13 +47,10 @@ TARGET_SCREEN_DENSITY := 320
 # Assert
 TARGET_OTA_ASSERT_DEVICE := kelly,KG5j,TECNO-KG5j
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 printk.devkmsg=on buildvariant=user
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x11b00000
@@ -108,6 +106,14 @@ BOARD_MAIN_SIZE := 9122611200 # TODO: Fix hardcoded value
 # Platform
 TARGET_BOARD_PLATFORM := mt6761
 BOARD_HAS_MTK_HARDWARE := true
+BOARD_VENDOR =: tecno
+
+# SEPolicy
+SELINUX_IGNORE_NEVERALLOWS := true
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -146,14 +152,15 @@ BOARD_AVB_VBMETA_VENDOR := vendor
 BOARD_AVB_VBMETA_VENDOR_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 1
-BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
+#BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
 # VNDK
 BOARD_VNDK_VERSION := current
 
 # VINTF
-#DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-#DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := 
 
 # Inherit the proprietary files
 include vendor/tecno/KG5j/BoardConfigVendor.mk
