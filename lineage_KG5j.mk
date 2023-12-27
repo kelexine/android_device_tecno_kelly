@@ -21,7 +21,6 @@ PRODUCT_MANUFACTURER := tecno
 
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
 
+BUILD_FINGERPRINT := "google/redfin/redfin:13/TQ3A.230901.001/10750268:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sys_tssi_32_ago_tecno-user 11 RP1A.200720.011 110917 release-keys"
-
-BUILD_FINGERPRINT := TECNO/KG5j-OP/KG5j:11/RP1A.200720.011/220929V405:user/release-keys
+    PRIVATE_BUILD_DESC="redfin-user 13 TQ3A.230901.001 10750268 release-keys"
