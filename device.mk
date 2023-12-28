@@ -150,9 +150,9 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayKG5j \
-    ApertureQRScannerOverlayKG5 \j
+    ApertureQRScannerOverlayKG5 \
     CarrierConfigOverlayKG5j \
-    FrameworksResOverlayKG5 \j
+    FrameworksResOverlayKG5 \
     SettingsOverlayKG5j \
     SystemUIOverlayKG5j \
     TelephonyOverlayKG5j \
