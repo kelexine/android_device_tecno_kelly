@@ -1,4 +1,4 @@
-package org.lineageos.tecno.imsinit;
+package org.lineageos.xiaomi.imsinit;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -23,11 +23,11 @@ import com.android.ims.ImsManager;
  */
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String LOG_TAG = "ImsInit";
-    
+
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.i(LOG_TAG, "onBoot");
-        
+
         context.startService(new Intent(context, PhoneStateService.class));
     }
 }

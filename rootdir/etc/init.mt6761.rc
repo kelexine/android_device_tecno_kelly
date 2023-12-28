@@ -278,6 +278,14 @@ on post-fs-data
     chown root system /data/vendor/flicker
     chmod 0771 /data/vendor/flicker
 
+#STD:add XLLWCHLYEL-738 kfp by hao.lv5 20220907 start
+    restorecon_recursive /tranfs
+    mkdir /tranfs/tranf2fs 0700 root shell
+    chmod 0771 /tranfs/tranf2fs
+    mkdir /tranfs/tranf2fs/kfp 0700 root shell
+    chmod 0771 /tranfs/tranf2fs/kfp
+#STD:add XLLWCHLYEL-738 kfp by hao.lv5 20220907 end
+
 #BSP:add XLLSHLSSP-17 for tranfs by shentao.yang 20190603 start
     restorecon_recursive /tranfs
 #BSP:add XLLSHLSSP-17 for tranfs by shentao.yang 20190603 end
@@ -1185,6 +1193,6 @@ service osi /system/bin/osi
 
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 start
 on property:persist.vendor.tran.wipedata=1 && property:ro.boot.atm=enable
-    
+    tran_factory_reset
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 end
 

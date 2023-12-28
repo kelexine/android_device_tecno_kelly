@@ -13,6 +13,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS := \
+    boot \
+    dtbo \
+    system \
+    system_ext \
+    product \
+    vendor \
+    vbmeta \
+    vbmeta_system
+
 # Build With GApps
 #WITH_GMS := true
 
@@ -46,9 +59,29 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
     
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-KG5j
+
 # IMS
 #$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 
+
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
+
+# ImsService
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService \
+    ImsServiceBase
+
+# Init
+PRODUCT_PACKAGES += \
+    init.mt6781.rc
+    
 # Engineer Mode
 #$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
 
@@ -89,10 +122,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RcsService
 
-# ImsInit hack
-#PRODUCT_PACKAGES += \
-    #ImsInit
-
 PRODUCT_PACKAGES += \
     BesLoudness \
     MtkInCallService
@@ -106,11 +135,29 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
-
-# WiFi
+    
+# HIDL
 PRODUCT_PACKAGES += \
-    WifiOverlay \
-    TetheringConfigOverlay
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0_system \
+    libhidltransport \
+    libhwbinder 
+    
+# Symbols
+PRODUCT_PACKAGES += \
+    libshim_vtservice
+
+# Overlays
+PRODUCT_PACKAGES += \
+    ApertureOverlayKG5j \
+    ApertureQRScannerOverlayKG5 \j
+    CarrierConfigOverlayKG5j \
+    FrameworksResOverlayKG5 \j
+    SettingsOverlayKG5j \
+    SystemUIOverlayKG5j \
+    TelephonyOverlayKG5j \
+    TetheringOverlayKG5j \
+    WifiOverlayKG5j
 
 # Vendor overlay
 PRODUCT_COPY_FILES += \
@@ -135,26 +182,6 @@ PRODUCT_CHARACTERISTICS := default
 
 # Rootdir
 PRODUCT_PACKAGES += \
-
-PRODUCT_PACKAGES += \
-    fstab.mt6761 \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.ago.rc \
-    init.connectivity.rc \
-    init.modem.rc \
-    init.mt6761.rc \
-    init.mt6761.usb.rc \
-    init.project.rc \
-    init.sensor_1_0.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    multi_init.rc \
-    init.recovery.mt6761.rc \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6761

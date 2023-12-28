@@ -1,1 +1,26 @@
-allow system_suspend nfc:binder { transfer };
+allow system_suspend sysfs:dir { read getattr open };
+
+allow system_suspend sysfs_batteryinfo:dir { read getattr open };
+
+allow system_suspend sysfs:file { read open getattr };
+
+allow system_suspend block_device:dir { search };
+
+allow system_suspend sysfs_batteryinfo:file { getattr open read };
+
+allow system_suspend sysfs_battery_supply:file { getattr open read };
+
+allow system_suspend sysfs_battery_supply:dir { read open };
+
+allow system_suspend sysfs_rtc:dir { read open };
+
+binder_call(mtk_hal_sensors, system_suspend)
+binder_call(system_suspend, mtk_hal_sensors)
+allow system_suspend vendor_sysfs_main_supply:dir { read };
+allow system_suspend vendor_sysfs_bms_supply:dir { read };
+allow untrusted_app unlabeled:filesystem { getattr };
+allow system_suspend vendor_sysfs_main_supply:dir { open };
+allow system_suspend vendor_sysfs_bms_supply:dir { open };
+allow system_suspend vendor_sysfs_bms_supply:file { read write open getattr };
+allow system_suspend vendor_sysfs_main_supply:file { read write open getattr };
+allow system_suspend sysfs_rtc:file { read write open getattr };

@@ -1,0 +1,2 @@
+type mtk_hal_camera, domain;
+get_prop(mtk_hal_camera, default_prop)

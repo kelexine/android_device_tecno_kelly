@@ -5,18 +5,7 @@
 #
 
 DEVICE_PATH := device/tecno/KG5j
-
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    system \
-    vendor \
-    product \
-    system_ext \
-    boot \
-    vbmeta \
-    vbmeta_vendor \
-    vbmeta_system
+VENDOR_PATH := vendor/tecno/KG5j
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
@@ -46,6 +35,10 @@ TARGET_SCREEN_DENSITY := 320
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := kelly,KG5j,TECNO-KG5j
+
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_tecno_KG5j
+TARGET_RECOVERY_DEVICE_MODULES ?= init_tecno_KG5j
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -118,7 +111,10 @@ BOARD_VENDOR =: tecno
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
-# SEPolicy
+# Sepolicy
+TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
+TARGET_HAS_FUSEBLK_SEPOLICY_ON_VENDOR := true
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
@@ -139,6 +135,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+
 # Use prebuilt vendor
 BUILD_WITHOUT_VENDOR := true
 BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/KG5j/vendor.img

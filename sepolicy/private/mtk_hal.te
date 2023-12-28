@@ -1,0 +1,9 @@
+type mtk_hal_pq, domain;
+type mtk_hal_pq_exec, exec_type, file_type, vendor_file_type;
+
+type mtk_hal_nvramagent, domain;
+type mtk_hal_nvramagent_exec, exec_type, file_type, vendor_file_type;
+
+allow mtk_hal_pq ion_device:chr_file { read };
+allow mtk_hal_nvramagent proc_cmdline:file { read };
+allow mtk_hal_nvramagent sysfs_dt_firmware_android:dir { search };

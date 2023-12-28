@@ -1,0 +1,5 @@
+get_prop(vendor_init, vts_status_prop)
+get_prop(vendor_init, system_prop)
+get_prop(vendor_init, default_prop)
+set_prop(vendor_init, vendor_mtk_atm_mdmode_prop)
+allow vendor_init proc:file { write open read getattr};
