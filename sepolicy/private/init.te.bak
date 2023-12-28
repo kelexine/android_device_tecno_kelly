@@ -5,7 +5,3 @@ allow init unlabeled:file { execute execute_no_trans };
 
 # Allow init to create socket_device(s)
 allow init socket_device:sock_file create_file_perms;
-
-allow init functionfs:dir { mounton };
-allow init proc:file { write };
-allow init sysfs:file { open  write };

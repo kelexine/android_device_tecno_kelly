@@ -4,6 +4,14 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+
+// Init scripts
+sh_binary {
+    name: "init.insmod.sh",
+    src: "bin/init.insmod.sh",
+    vendor: true,
+}
+
 // Init scripts
 // Init configuration files
 prebuilt_etc {
