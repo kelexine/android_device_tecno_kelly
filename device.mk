@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt67611.rc
+    init.mt6761.rc
     
 # Engineer Mode
 #$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
@@ -123,7 +123,6 @@ PRODUCT_PACKAGES += \
     RcsService
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 # IMS
@@ -150,18 +149,14 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayKG5j \
-    ApertureQRScannerOverlayKG5 \
+    ApertureQRScannerOverlayKG5j \
     CarrierConfigOverlayKG5j \
-    FrameworksResOverlayKG5 \
+    FrameworksResOverlayKG5j \
     SettingsOverlayKG5j \
     SystemUIOverlayKG5j \
     TelephonyOverlayKG5j \
     TetheringOverlayKG5j \
     WifiOverlayKG5j
-
-# Vendor overlay
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/vendor-overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION))
 
 # APN's
 PRODUCT_COPY_FILES += \
@@ -174,8 +169,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/xyz.extras.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/xyz.extras.xml
 
 # Partitions
-PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
