@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6781.rc
+    init.mt67611.rc
     
 # Engineer Mode
 #$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
@@ -127,14 +127,14 @@ PRODUCT_PACKAGES += \
     MtkInCallService
 
 # IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
+#PRODUCT_BOOT_JARS += \
+#    mediatek-common \
+#    mediatek-framework \
+#    mediatek-ims-base \
+#    mediatek-ims-common \
+#    mediatek-telecom-common \
+#    mediatek-telephony-base \
+#   mediatek-telephony-common
     
 # HIDL
 PRODUCT_PACKAGES += \
