@@ -155,7 +155,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayKG5j \
     SystemUIOverlayKG5j \
     TelephonyOverlayKG5j \
-    TetheringOverlayKG5j \
     WifiOverlayKG5j
 
 # APN's
