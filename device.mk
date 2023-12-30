@@ -64,7 +64,7 @@ PRODUCT_PACKAGES += \
     DT2W-Service-KG5j
 
 # IMS
-#$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
+$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 
 
 # ImsInit hack
@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
     init.mt6761.rc
     
 # Engineer Mode
-#$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
+$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -126,14 +126,14 @@ PRODUCT_PACKAGES += \
     MtkInCallService
 
 # IMS
-#PRODUCT_BOOT_JARS += \
-#    mediatek-common \
-#    mediatek-framework \
-#    mediatek-ims-base \
-#    mediatek-ims-common \
-#    mediatek-telecom-common \
-#    mediatek-telephony-base \
-#   mediatek-telephony-common
+PRODUCT_BOOT_JARS += \
+     mediatek-common \
+     mediatek-framework \
+     mediatek-ims-base \
+     mediatek-ims-common \
+     mediatek-telecom-common \
+     mediatek-telephony-base \
+     mediatek-telephony-common
     
 # HIDL
 PRODUCT_PACKAGES += \

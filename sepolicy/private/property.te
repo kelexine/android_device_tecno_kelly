@@ -1,2 +1,2 @@
-system_internal_prop(system_mtk_imsconfig_prop)
-system_internal_prop(system_mtk_rcs_single_reg_support_prop)
+type render_prop, property_type;
+type mtk_pq_prop, property_type, mtk_core_property_type;

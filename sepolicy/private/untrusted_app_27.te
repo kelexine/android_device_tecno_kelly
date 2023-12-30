@@ -1,2 +1,0 @@
-allow untrusted_app_27 zygote:unix_stream_socket { getopt };
-allow untrusted_app_27 shell_test_data_file:dir { search };

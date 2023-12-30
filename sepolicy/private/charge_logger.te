@@ -1,5 +1,0 @@
-type charge_logger, domain;
-allow charge_logger vendor_sysfs_battery_supply:dir { search open read };
-allow charge_logger vendor_sysfs_usb_supply:dir { search read open };
-allow charge_logger vendor_sysfs_bms_supply:dir { search read open };
-allow charge_logger vendor_sysfs_battery_supply:file { read write open getattr };
