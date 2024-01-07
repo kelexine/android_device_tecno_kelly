@@ -75,12 +75,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
+<<<<<<< HEAD
     RcsService \
     ImsServiceBase
 
 # Init
 PRODUCT_PACKAGES += \
     init.mt6761.rc
+=======
+    RcsService
+>>>>>>> 546c10f (KG5j : remove undifined modules)
     
 # Engineer Mode
 #$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
@@ -143,8 +147,8 @@ PRODUCT_PACKAGES += \
     libhwbinder 
     
 # Symbols
-PRODUCT_PACKAGES += \
-    libshim_vtservice
+#PRODUCT_PACKAGES += \
+#    libshim_vtservice
 
 # Overlays
 PRODUCT_PACKAGES += \
