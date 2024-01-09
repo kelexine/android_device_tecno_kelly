@@ -172,7 +172,6 @@ PRODUCT_CHARACTERISTICS := default
 # RootDir
 PRODUCT_PACKAGES += \
     init.mt6761.rc \
-    init.safailnet.rc \
     fstab.mt6761
     
 PRODUCT_COPY_FILES += \
