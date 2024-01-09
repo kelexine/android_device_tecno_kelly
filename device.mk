@@ -119,16 +119,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     MtkInCallService
-
-# IMS
-#PRODUCT_BOOT_JARS += \
-#     mediatek-common \
-#     mediatek-framework \
-#     mediatek-ims-base \
-#     mediatek-ims-common \
-#     mediatek-telecom-common \
-#     mediatek-telephony-base \
-#     mediatek-telephony-common
     
 # HIDL
 PRODUCT_PACKAGES += \
@@ -138,8 +128,9 @@ PRODUCT_PACKAGES += \
     libhwbinder 
     
 # Symbols
-#PRODUCT_PACKAGES += \
-#    libshim_vtservice
+PRODUCT_PACKAGES += \
+    libshim_vtservice \
+    ImsServiceBase
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -172,6 +163,7 @@ PRODUCT_CHARACTERISTICS := default
 # RootDir
 PRODUCT_PACKAGES += \
     init.mt6761.rc \
+    init.target.rc \
     fstab.mt6761
     
 PRODUCT_COPY_FILES += \

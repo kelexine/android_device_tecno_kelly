@@ -1,3 +1,0 @@
-# SPD: modify for zram back-device path for KFLHLEYJ-1331 zhiqiang.zhang 20201216 start
-/dev/block/zram0 none swap defaults zramsize=100%,max_comp_streams=8,zram_loopback_path=/data/per_boot/zram_swap,swapprio=10,zram_backingdev_size=256M
-# SPD: modify for zram back-device path for KFLHLEYJ-1331 zhiqiang.zhang 20201216 end
