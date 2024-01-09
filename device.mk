@@ -68,23 +68,14 @@ PRODUCT_PACKAGES += \
 
 
 # ImsInit hack
-#PRODUCT_PACKAGES += \
-#    ImsInit
+PRODUCT_PACKAGES += \
+    ImsInit
 
 # ImsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
-<<<<<<< HEAD
-    RcsService \
-    ImsServiceBase
-
-# Init
-PRODUCT_PACKAGES += \
-    init.mt6761.rc
-=======
     RcsService
->>>>>>> 546c10f (KG5j : remove undifined modules)
     
 # Engineer Mode
 #$(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
@@ -178,12 +169,16 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
 
-# Rootdir
+# RootDir
 PRODUCT_PACKAGES += \
-
+    init.mt6761.rc \
+    init.safailnet.rc \
+    fstab.mt6761
+    
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6761
-
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761 \
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.mt6761
+    
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
