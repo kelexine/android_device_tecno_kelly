@@ -165,11 +165,11 @@ PRODUCT_PACKAGES += \
     init.mt6761.rc \
     init.target.rc \
     fstab.mt6761
-    
+
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761 \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.mt6761
-    
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761 \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.mt6761
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
