@@ -116,6 +116,7 @@ BOARD_VENDOR =: tecno
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
+BOARD_ROOT_EXTRA_FOLDERS += tranfs
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
