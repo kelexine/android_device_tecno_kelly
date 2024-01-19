@@ -160,12 +160,26 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
 
+# Keystore2
+PRODUCT_PACKAGES += \
+    keystore2
+
 # RootDir
 PRODUCT_PACKAGES += \
     init.mt6761.rc \
     init.target.rc \
     fstab.mt6761
 
+# Firmware
+RECOVERY_TS_FW_PATH := vendor/tecno/KG5j/proprietary/vendor/firmware
+
+PRODUCT_COPY_FILES += \
+    $(RECOVERY_TS_FW_PATH)/hdl_firmware.img:recovery/root/vendor/firmware/hdl_firmware.img
+    $(RECOVERY_TS_FW_PATH)/hdl_firmware_01.img:recovery/root/vendor/firmware/hdl_firmware_01.img
+    $(RECOVERY_TS_FW_PATH)/rgx.sh:recovery/root/vendor/firmware/rgx.sh
+    $(RECOVERY_TS_FW_PATH)/rgx.fw:recovery/root/vendor/firmware/rgx.fw
+
+# Recovery Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RECOVERY)/root/fstab.mt6761 \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6761
