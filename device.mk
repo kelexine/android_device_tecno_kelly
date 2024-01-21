@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
-
+v
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.kg5j
@@ -174,10 +174,10 @@ PRODUCT_PACKAGES += \
 RECOVERY_TS_FW_PATH := vendor/tecno/KG5j/proprietary/vendor/firmware
 
 PRODUCT_COPY_FILES += \
-    $(RECOVERY_TS_FW_PATH)/hdl_firmware.img:recovery/root/vendor/firmware/hdl_firmware.img
-    $(RECOVERY_TS_FW_PATH)/hdl_firmware_01.img:recovery/root/vendor/firmware/hdl_firmware_01.img
-    $(RECOVERY_TS_FW_PATH)/rgx.sh:recovery/root/vendor/firmware/rgx.sh
-    $(RECOVERY_TS_FW_PATH)/rgx.fw:recovery/root/vendor/firmware/rgx.fw
+    $(RECOVERY_TS_FW_PATH)/hdl_firmware.img:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/hdl_firmware.img
+    $(RECOVERY_TS_FW_PATH)/hdl_firmware_01.img:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/hdl_firmware_01.img
+    $(RECOVERY_TS_FW_PATH)/rgx.sh:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/rgx.sh
+    $(RECOVERY_TS_FW_PATH)/rgx.fw:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/rgx.fw
 
 # Recovery Fstab
 PRODUCT_COPY_FILES += \
