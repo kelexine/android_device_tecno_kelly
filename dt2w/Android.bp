@@ -5,7 +5,7 @@
  */
 
 android_app {
-    name: "DT2W-Service-KG5j",
+    name: "DT2W-Service-kelly",
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
@@ -19,13 +19,13 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_co.potatoproject.dt2w.KG5j"
+        "privapp-permissions_co.potatoproject.dt2w.kelly"
     ]
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_co.potatoproject.dt2w.KG5j",
+    name: "privapp-permissions_co.potatoproject.dt2w.kelly",
     sub_dir: "permissions",
-    src: "privapp-permissions_co.potatoproject.dt2w.KG5j.xml",
+    src: "privapp-permissions_co.potatoproject.dt2w.kelly.xml",
     filename_from_src: true,
 }

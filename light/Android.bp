@@ -15,9 +15,9 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.kg5j",
-    init_rc: ["android.hardware.light@2.0-service.kg5j.rc"],
-    vintf_fragments: ["android.hardware.light-service.KG5j.xml"],
+    name: "android.hardware.light@2.0-service.kelly",
+    init_rc: ["android.hardware.light@2.0-service.kelly.rc"],
+    vintf_fragments: ["android.hardware.light-service.kelly.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",

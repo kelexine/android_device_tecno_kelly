@@ -61,7 +61,7 @@ PRODUCT_PACKAGES += \
     
 # DT2W
 PRODUCT_PACKAGES += \
-    DT2W-Service-KG5j
+    DT2W-Service-kelly
 
 # IMS
 #$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
@@ -106,7 +106,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.kg5j
+    android.hardware.light@2.0-service.kelly
 
 # KPOC
 PRODUCT_PACKAGES += \
@@ -134,14 +134,14 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    ApertureOverlayKG5j \
-    ApertureQRScannerOverlayKG5j \
-    CarrierConfigOverlayKG5j \
-    FrameworksResOverlayKG5j \
-    SettingsOverlayKG5j \
-    SystemUIOverlayKG5j \
-    TelephonyOverlayKG5j \
-    WifiOverlayKG5j
+    ApertureOverlaykelly \
+    ApertureQRScannerOverlaykelly \
+    CarrierConfigOverlaykelly \
+    FrameworksResOverlaykelly \
+    SettingsOverlaykelly \
+    SystemUIOverlaykelly \
+    TelephonyOverlaykelly \
+    WifiOverlaykelly
 
 # APN's
 PRODUCT_COPY_FILES += \
@@ -178,4 +178,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/tecno/KG5j/KG5j-vendor.mk)
+$(call inherit-product, vendor/tecno/kelly/kelly-vendor.mk)
