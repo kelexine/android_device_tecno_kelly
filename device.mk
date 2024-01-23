@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
 
 # ImsInit hack
 #PRODUCT_PACKAGES += \
-#    ImsInit
+    ImsInit
 
 # ImsService
 PRODUCT_PACKAGES += \
