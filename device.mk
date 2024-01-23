@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
-v
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.kg5j
