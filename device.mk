@@ -170,14 +170,15 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     fstab.mt6761
 
-# Firmware
-RECOVERY_TS_FW_PATH := vendor/tecno/KG5j/proprietary/vendor/firmware
-
+# Touch Module
 PRODUCT_COPY_FILES += \
-    $(RECOVERY_TS_FW_PATH)/hdl_firmware.img:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/hdl_firmware.img
-    $(RECOVERY_TS_FW_PATH)/hdl_firmware_01.img:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/hdl_firmware_01.img
-    $(RECOVERY_TS_FW_PATH)/rgx.sh:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/rgx.sh
-    $(RECOVERY_TS_FW_PATH)/rgx.fw:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/rgx.fw
+    $(LOCAL_PATH)/rootdir/vendor/firmware/hdl_firmware.img:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/hdl_firmware.img \
+    $(LOCAL_PATH)/rootdir/vendor/firmware/hdl_firmware_01.img:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/hdl_firmware_01.img
+    
+# GPU Driver
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/vendor/firmware/rgx.sh:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/rgx.sh \
+    $(LOCAL_PATH)/rootdir/vendor/firmware/rgx.fw:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/rgx.fw
 
 # Recovery Fstab
 PRODUCT_COPY_FILES += \

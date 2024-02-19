@@ -19,13 +19,13 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_co.potatoproject.dt2w.KG5j"
+        "privapp-permissions_com.kelexine.dt2w.KG5j"
     ]
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_co.potatoproject.dt2w.KG5j",
+    name: "privapp-permissions_com.kelexine.dt2w.KG5j",
     sub_dir: "permissions",
-    src: "privapp-permissions_co.potatoproject.dt2w.KG5j.xml",
+    src: "privapp-permissions_com.kelexine.dt2w.KG5j.xml",
     filename_from_src: true,
 }

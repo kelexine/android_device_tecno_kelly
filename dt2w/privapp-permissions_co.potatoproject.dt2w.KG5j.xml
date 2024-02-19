@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <permissions>
-    <privapp-permissions package="co.potatoproject.dt2w.KG5j">
+    <privapp-permissions package="com.kelexine.dt2w.KG5j">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 </permissions>
