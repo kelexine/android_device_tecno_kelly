@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kelexine.dt2w.KG5j"
+    package="com.kelexine.dt2w.kelly"
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
@@ -18,6 +18,6 @@
             </intent-filter>
         </receiver>
 
-        <service android:enabled="true" android:name=".DT2WServiceKG5j" />
+        <service android:enabled="true" android:name=".DT2WServicekelly" />
     </application>
 </manifest>

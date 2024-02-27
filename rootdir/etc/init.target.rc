@@ -1,14 +1,14 @@
 on boot
     stop console
 
-service debug_logcat /system/bin/logcat -f /cache/logcat.txt -v threadtime
+service debug_logcat /system/bin/logcat -f /metadata/logcat.txt -v threadtime
     class main
     user root
     group system
     disabled
 
 on post-fs-data
-    rm /cache/logcat.txt
+    rm /metadata/logcat.txt
     start debug_logcat
 
 on property:sys.boot_completed=1

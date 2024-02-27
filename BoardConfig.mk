@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/tecno/KG5j
+DEVICE_PATH := device/tecno/kelly
 VENDOR_PATH := vendor/tecno/KG5j
 
 BUILD_BROKEN_DUP_RULES := true
@@ -27,14 +27,14 @@ TARGET_USES_64_BIT_BINDER := true
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := KG5j
+TARGET_BOOTLOADER_BOARD_NAME := kelly
 TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 320
 
 # Assertion
-TARGET_OTA_ASSERT_DEVICE := kelly,KG5j,TECNO-KG5j
+TARGET_OTA_ASSERT_DEVICE := kelly
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -50,8 +50,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := KG5j_defconfig
-TARGET_KERNEL_SOURCE := kernel/tecno/KG5j
+TARGET_KERNEL_CONFIG := kelly_defconfig
+TARGET_KERNEL_SOURCE := kernel/tecno/kelly
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -140,7 +140,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Use prebuilt vendor
 BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/KG5j/vendor.img
+BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/kelly/vendor.img
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

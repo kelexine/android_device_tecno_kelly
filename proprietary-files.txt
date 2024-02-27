@@ -297,7 +297,7 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib/hw/gatekeeper.default.so
-vendor/lib/hw/gatekeeper.kg5j_h6126.so
+vendor/lib/hw/gatekeeper.kelly_h6126.so
 vendor/lib/hw/gatekeeper.mt6761.so
 vendor/lib/vendor.trustonic.tee@1.0.so
 vendor/lib/vendor.trustonic.tee@1.1.so

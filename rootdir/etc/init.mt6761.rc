@@ -411,7 +411,7 @@ on post-fs-data
     chown radio radio /sys/devices/platform/battery/Charging_CallState
 
     #SID:add KBBGHLESGQ-75 by weike.xu 20190723 start
-    chmod 0666 /sys/devices/platform/tran_battery/OTG_CTL
+    chmod 0777 /sys/devices/platform/tran_battery/OTG_CTL
     #SID:add KBBGHLESGQ-75 by weike.xu 20190723 end
 	#BSP: modify for battery aging feature XLBEPUB-6 by fan.hong 20200723 end
     chmod 0666 /sys/devices/platform/tran_battery_aging/AGING_FG
@@ -1193,7 +1193,7 @@ service osi /system/bin/osi
     #seclabel u:r:osi:s0
 
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 start
-on property:persist.vendor.tran.wipedata=1 && property:ro.boot.atm=enable
+#on property:persist.vendor.tran.wipedata=1 && property:ro.boot.atm=enable
     
 #BSP:add custom factory reset KFLHLEYJ-8 by wang.qin 20201026 end
 
