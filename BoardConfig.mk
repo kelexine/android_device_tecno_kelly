@@ -140,7 +140,7 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Use prebuilt vendor
 BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/kelly/vendor.img
+BOARD_PREBUILT_VENDORIMAGE := vendor/tecno/KG5j/vendor.img
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
