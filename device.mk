@@ -193,4 +193,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/tecno/kelly/kelly-vendor.mk)
+$(call inherit-product, vendor/tecno/KG5j/KG5j-vendor.mk)
