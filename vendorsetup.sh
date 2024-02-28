@@ -7,4 +7,4 @@ rm -rf device/mediatek/sepolicy_vndr
 #git clone https://github.com/kelexine/bpf system/bpf
 #git clone https://github.com/nashc-dev/android_hardware_mediatek hardware/mediatek
 git clone https://github.com/Shirayuki39/android_device_mediatek_sepolicy_vndr device/mediatek/sepolicy_vndr
-wget https://github.com/kelexine/android_device_tecno_KV5j/releases/download/v1/vendor.img -O vendor/tecno/KG5j/vendor.img
+wget https://github.com/kelexine/android_device_tecno_KG5j/releases/download/v1/vendor.img -O vendor/tecno/KG5j/vendor.img
