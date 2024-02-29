@@ -117,8 +117,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RcsService
 
-PRODUCT_PACKAGES += \
-    MtkInCallService
+#PRODUCT_PACKAGES += \
+    #MtkInCallService
     
 # HIDL
 PRODUCT_PACKAGES += \
