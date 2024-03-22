@@ -1,4 +1,4 @@
-# Android Device Tree for Tecno Spark 8C kelly (kelly)
+# Android Device Tree for Tecno Spark 8C kelly (KG5j)
 
 ```
 #
@@ -16,9 +16,9 @@
 |Chipset             |Mediatek Helio A22 MT6761 (12 nm)                                     |
 |GPU                 |PowerVR GE6300                                             |
 |Memory              |RAM (2GB+2GB Extended RAM)                                                |
-|Android Version     |Android 11 (HiOS 7.6)                                               |
+|Android Version     |Android 11 GO Edition (HiOS 7.6)                                               |
 |Storage             |64GB                                                      |
-|Variant             |kelly                                      |
+|Variant             |kelly (KG5j)                                      |
 
 # Device Photos
 
