@@ -25,7 +25,7 @@
          2 = left side
          3 = right side
     -->
-    <integer name="config_fingerprintSensorLocation">3</integer>
+    <integer name="config_fingerprintSensorLocation">0</integer>
 
     <!-- The number of vibration intensity levels supported by the device.
          Note that this should correspond to the ability to vary the vibration amplitude, with
