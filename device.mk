@@ -22,12 +22,10 @@ AB_OTA_PARTITIONS := \
     system \
     system_ext \
     product \
-    vendor \
-    vbmeta \
-    vbmeta_system
+    vendor
 
 # Build With GApps
-#WITH_GMS := true
+WITH_GMS := true
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
